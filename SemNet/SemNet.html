@@ -1,0 +1,78 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      div {
+        position: fixed;
+        width: 50px;
+        background: skyblue;
+        margin-left: -50px;
+        transition: margin 0.5s;
+      }
+      .fuf {
+        display: none;
+        color: red;
+        background: skyblue;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        width: min-content;
+      }
+
+      .fufu {
+        display: inline;
+      }
+
+      .farofa {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>dsada</p>
+      <p>dsada</p>
+      <p>dsada</p>
+      <p>dsada</p>
+      <p>dsada</p>
+      <p>dsada</p>
+      <p>dsada</p>
+    </div>
+    <form onsubmit="init(event)">
+      <input
+        type="text"
+        required
+        autofocus
+        placeholder="SEM NET, FUD..."
+      >
+    </form>
+    <h1 class="fuf">nesse lugar</h1>
+
+    <script>
+      function init(event) {
+        event.preventDefault();
+        let valor = document.querySelector('input').value;
+
+        document.querySelector('h1').innerHTML = valor;
+
+        // document.querySelector('h1').className += 'fufu';
+        // document.querySelector('h1').setAttribute('class', 'fufu');
+        
+        if (document.querySelector('div').classList.contains('farofa') === true) {
+          document.querySelector('div').classList.remove('farofa')
+        } else {
+          document.querySelector('h1').classList.add('fufu');
+          document.querySelector('div').classList.add('farofa')
+        }
+
+      }
+    </script>
+  </body>
+  </html>

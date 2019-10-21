@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="style.css">
+	<title>Fake Login</title>
+</head>
+<body>
+	<h1></h1>
+	<h2></h2>
+	<form onsubmit="login(event)">  
+		<span>
+			<label>Email</label>
+			<input
+				type="email"
+				id="email"
+				required
+				autofocus
+				placeholder="email@teste.com"	
+			>
+		</span>
+		<span>
+			<label>Senha</label>
+			<input
+				type="password"
+				id="password"
+				required
+				placeholder="Senha"	
+			>
+		</span>
+		<button>
+			Entrar
+		</button>
+	</form>
+	<script>
+    let inpEmail = document.querySelector('#email');
+    let inpPass = document.querySelector('#password');
+    
+    let logEmail = 'teste@teste.com'
+    let logPass = 'senha'
+
+    function login (event) {
+      event.preventDefault();
+
+      if (inpEmail.value === logEmail) {
+        document.querySelector('h1').innerHTML = 'Email certo!!'
+      } else { 
+        document.querySelector('h1').innerHTML = 'Email errado!!'
+      }
+    
+      if (inpPass.value === logPass) {
+        document.querySelector('h2').innerHTML = 'Senha certa!!'
+      } else { 
+        document.querySelector('h2').innerHTML = 'Senha errada!!'
+    }
+  }
+  
+	</script>
+</body>
+</html>

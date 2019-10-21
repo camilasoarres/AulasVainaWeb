@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URI 1003</title>
+</head>
+<body>
+  <form onsubmit="calc(event)">
+    <input type="number" id="n1" required>
+    <input type="number" id="n2" required>
+    <button>Calc</button>
+    <p>Resutado vai sair aq</p>
+  </form>
+  <script type="text/javascript">
+    let n1 = document.getElementById('n1');
+    let n2 = document.getElementById('n2');
+    let p = document.querySelector('p');
+
+    function calc(event) {
+      event.preventDefault();
+      p.innerHTML = 'SOMA = ' + (parseInt(n1.value) + parseInt(n2.value))
+    }
+  </script>
+</body>
+</html>

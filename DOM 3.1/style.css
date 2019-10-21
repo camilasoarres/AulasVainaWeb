@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: black;
+  /* background-image: url('https://www.aether-force.com/wp-content/uploads/2017/05/f01.gif'); */
+}
+
+#next, #previous {
+  position: absolute;
+  height: 30vw;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+#previous {
+  left: 10vw;
+}
+
+#next {
+  right: 10vw;
+}
+
+#current {
+  position: relative;
+  width: 60vw;
+  z-index: 3;
+}
